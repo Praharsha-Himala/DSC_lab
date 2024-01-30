@@ -27,19 +27,18 @@ class KMeans:
         # Assigning the data points to randomly picked points by taking min of distance_from_centeroid from each
         # centeroid
         def assign_to_clusters(X, centeroids, k: int):
-            distance_from_centeroid = np.array([np.sqrt((centeroids[i] - X) ** 2) for i in range(k)])
-            distance_from_centeroid = np.sum(distance_from_centeroid, axis=-1)
-            labels = np.argmin(distance_from_centeroid, axis=0)
+            distance_from_centeroid = np.linalg.norm(centeroids - X[:, np.newaxis, :], axis=-1)
+            labels = np.argmin(distance_from_centeroid, axis=1)
             return labels
 
         # Updating centeroids by taking mean of assigned cluster data points
-        def update_centeroids(X, labels, k: int, centeroids):
+        def update_centeroids(X, labels, k: int):
             new_centeroids = np.array([np.mean(X[labels == i], axis=0) for i in range(k)])
             return new_centeroids
 
         # Calculating distance from centeroids
         def distance(data_points, centeroids):
-            return np.mean(np.sqrt((data_points - centeroids) ** 2), axis=0)
+            return np.mean(np.linalg.norm(data_points - centeroids, axis=-1))
 
         # fit algorithm begins here
         # Initialization by randomly picking 'k' centeroids
@@ -49,7 +48,7 @@ class KMeans:
         for iteration in range(max_iters):
             labels = assign_to_clusters(X, centeroids, k)
             # updating centeroids
-            new_centeroids = update_centeroids(X, labels, k, centeroids)
+            new_centeroids = update_centeroids(X, labels, k)
 
             if distance(new_centeroids, centeroids).all() < tol:
                 break
