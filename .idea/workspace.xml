@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3738eb8e-5940-4c2f-9e3a-408c70574136" name="Changes" comment="Naive bayes">
-      <change afterPath="$PROJECT_DIR$/EDA.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kaggle_phshing_site_urls_Feature_extractor_URL.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GaussianNaiveBayes.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KMeans.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KNN.py" beforeDir="false" />
-    </list>
+    <list default="true" id="3738eb8e-5940-4c2f-9e3a-408c70574136" name="Changes" comment="added requirements.txt and other dependencies" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -135,7 +125,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707913558771</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added requirements.txt and other dependencies">
+      <option name="closed" value="true" />
+      <created>1720249519346</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1720249519346</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -144,6 +142,7 @@
     <MESSAGE value="Code modified for higher dimensional data." />
     <MESSAGE value="Created KNN algorithm and evaluation with confusion matrix." />
     <MESSAGE value="Naive bayes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Naive bayes" />
+    <MESSAGE value="added requirements.txt and other dependencies" />
+    <option name="LAST_COMMIT_MESSAGE" value="added requirements.txt and other dependencies" />
   </component>
 </project>
