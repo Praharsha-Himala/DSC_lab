@@ -1,0 +1,7 @@
+setup.py
+Phishing_URL_Detection.egg-info/PKG-INFO
+Phishing_URL_Detection.egg-info/SOURCES.txt
+Phishing_URL_Detection.egg-info/dependency_links.txt
+Phishing_URL_Detection.egg-info/requires.txt
+Phishing_URL_Detection.egg-info/top_level.txt
+src/__init__.py

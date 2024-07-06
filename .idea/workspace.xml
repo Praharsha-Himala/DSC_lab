@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3738eb8e-5940-4c2f-9e3a-408c70574136" name="Changes" comment="Created KNN algorithm and evaluation with confusion matrix.">
-      <change afterPath="$PROJECT_DIR$/GaussianNaiveBayes.py" afterDir="false" />
+    <list default="true" id="3738eb8e-5940-4c2f-9e3a-408c70574136" name="Changes" comment="Naive bayes">
+      <change afterPath="$PROJECT_DIR$/EDA.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kaggle_phshing_site_urls_Feature_extractor_URL.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GaussianNaiveBayes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KMeans.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KNN.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +30,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Praharsha-Himala&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Praharsha-Himala/DSC_lab.git&quot;,
+    &quot;accountId&quot;: &quot;2f2b0bb5-d375-40b8-a8ce-aa9517275ada&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -35,15 +54,27 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Python.KMeans.executor&quot;: &quot;Run&quot;,
+    &quot;Python.stream_lit_file.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+    &quot;ToolWindowPython Console.ShowToolbar&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/HARSHU/PycharmProjects/DSC_lab&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\HARSHU\PycharmProjects\DSC_lab" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\HARSHU\PycharmProjects\DSC_lab" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-50da183f06c8-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.13135.95" />
+        <option value="bundled-python-sdk-5b207ade9991-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.17890.14" />
       </set>
     </attachedChunks>
   </component>
@@ -96,7 +127,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706586059401</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Naive bayes">
+      <option name="closed" value="true" />
+      <created>1707913558771</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1707913558771</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -104,6 +143,7 @@
     <MESSAGE value="Code uploaded for Kmeans algorithm." />
     <MESSAGE value="Code modified for higher dimensional data." />
     <MESSAGE value="Created KNN algorithm and evaluation with confusion matrix." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created KNN algorithm and evaluation with confusion matrix." />
+    <MESSAGE value="Naive bayes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Naive bayes" />
   </component>
 </project>

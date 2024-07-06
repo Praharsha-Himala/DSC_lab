@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: Phishing-URL-Detection
+Version: 0.0.1
+Author: Himala Praharsha Chittathuru
+Author-email: chimalapraharsha21@iisertvm.ac.in
+Requires-Dist: pandas
+Requires-Dist: numpy
