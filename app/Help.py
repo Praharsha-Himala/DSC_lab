@@ -4,6 +4,7 @@ from urllib.parse import urlparse
 import re
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
+from sklearn.ensemble import RandomForestClassifier
 
 class FeatureExtractor:
     def __init__(self, dataframe):
@@ -98,45 +99,50 @@ class FeatureExtractor:
     def preview(df):
         return df.head()
 
-def predict(url):
-    data = pd.DataFrame([url], columns=["URL"])
+
+def improve(url, label):
+    data = pd.read_csv(r'C:\Users\HARSHU\PycharmProjects\DSC_lab\combined_data.csv')
+    data = data[['URL', 'label']]
+    data['URL'] = data['URL'].apply(lambda x: str(x) if isinstance(x, float) else x)
+    nan_count = data['label'].isna().sum()
+    print('Nan values in comined dataset:', nan_count)
+    data = data.dropna(subset=['label'])
+    new_data = pd.DataFrame({
+        'URL': [url],
+        'label': [label]
+    })
+    data = pd.concat([data, new_data], ignore_index=True)
     dataframe = FeatureExtractor(data)
     test = dataframe.Count_feature_extractor(data)
-    test = test.drop('URL', axis=1)
-    scaler = pickle.load(open(r"C:\Users\HARSHU\PycharmProjects\DSC_lab\scaler.pkl", 'rb'))
-    test_scaled = scaler.transform(test)
-    model = pickle.load(open(r'C:\Users\HARSHU\PycharmProjects\DSC_lab\RandomForest_model.pkl', 'rb'))
-    prediction = model.predict(test_scaled)
-    return prediction
+    X = test.drop(['URL', 'label'], axis=1)
+    y = test['label']
+    scaler = StandardScaler()
+    X_scaled = scaler.fit_transform(X)
+    model = RandomForestClassifier()
+    model.fit(X_scaled, y)
+    pickle.dump(model, open("C:/Users/HARSHU/PycharmProjects/DSC_lab/RandomForest_model.pkl", 'wb'))
+    pickle.dump(scaler, open("C:/Users/HARSHU/PycharmProjects/DSC_lab/scaler.pkl", 'wb'))
 
 def app():
-    st.title("Know your URLs")
-    st.subheader("Scared of opening unknown URLs?")
-    st.subheader(" Not anymore, use our phishing URL detection tool to know if the website is safe to proceed!\n", divider=True)
-
+    st.title("Help us to improve the performance")
+    st.markdown("""
+    If you think the model has made mistakes in predicting your URL behavior, kindly share the URL and its label
+    - Select the appropriate label (Legitimate or Unsafe) of URL based on your experience
+    - Do NOT use this page if you are not sure about the label or the true nature of the URL
+    """)
     user_input = st.text_input("Enter URL")
-
     if user_input:
         user_input = user_input.strip()
         if user_input:
-            if st.button("Predict"):
-                with st.spinner("Predicting..."):
-                    prediction = predict(user_input)
-                    if prediction[0] == 0:
-                        st.error("🔴 Given URL might lead to a phishing website!")
-                    else:
-                        st.success("🟢 Given URL might be safe to use")
-                st.markdown("\U0001F494 If the prediction is wrong, and you know the true nature of the given URL, please REDIRECT to 'Help us improve' page in the menu dropdown")
-
+            if st.button("Legitimate"):
+                with st.spinner("Please Do NOT close this window"):
+                    improve(user_input, 1.0)
+                    st.write("Thanks for helping us to improve!")
+                st.empty()
+            if st.button("Unsafe"):
+                with st.spinner("Please Do Not close this window"):
+                    improve(user_input, 0.0)
+                    st.write("Thanks for helping us to improve!")
+                st.empty()
         else:
             st.warning("Please enter a valid URL.")
-
-    st.markdown("**Disclaimer**: We try to provide an estimate of safety of URL's, using machine learning. While aiming for higher accuracy, no prediction can be completely accurate. We are working on improving for better results.")
-    st.subheader("", divider=True)
-    st.markdown("""
-    :bulb: Tips
-    - Copy the URL of the website you want to check 
-    - Paste the valid URL into the text box above
-    - Click enter and then predict button to analyze
-    """)
-    st.caption("Removing '/' at the end of the URL while pasting will help in better results!")

@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-import predict, References, Info, Authors
+import predict, References, Info, Authors, Help
 
 st.set_page_config(
     page_title="Phishing URL detection"
@@ -20,8 +20,8 @@ class MultiApp:
         with st.sidebar:
             app = option_menu(
                 menu_title="Menu",
-                options=['Home', 'About', 'Authors', 'References'],
-                icons=['house-fill', 'chat-fill', 'person-circle', 'book'],
+                options=['Home', 'About', 'Authors', 'References', 'Help Us Improve'],
+                icons=['house-fill', 'chat-fill', 'person-circle', 'book', 'gear-fill'],
                 menu_icon='chat-text-fill'
             )
 
@@ -37,4 +37,6 @@ class MultiApp:
         if app == 'References':
             References.app()
 
+        if app == 'Help Us Improve':
+            Help.app()
     run()
