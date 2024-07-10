@@ -98,33 +98,42 @@ class FeatureExtractor:
     @staticmethod
     def preview(df):
         return df.head()
-
-
 def improve(url, label):
+    # Load existing data and prepare for new data addition
     data = pd.read_csv(r'C:\Users\HARSHU\PycharmProjects\DSC_lab\combined_data.csv')
     data = data[['URL', 'label']]
     data['URL'] = data['URL'].apply(lambda x: str(x) if isinstance(x, float) else x)
     nan_count = data['label'].isna().sum()
-    print('Nan values in comined dataset:', nan_count)
+    print('Nan values in combined dataset:', nan_count)
     data = data.dropna(subset=['label'])
+
+    # Add new data
     new_data = pd.DataFrame({
         'URL': [url],
         'label': [label]
     })
     data = pd.concat([data, new_data], ignore_index=True)
+
+    # Feature extraction and scaling
     dataframe = FeatureExtractor(data)
     test = dataframe.Count_feature_extractor(data)
     X = test.drop(['URL', 'label'], axis=1)
     y = test['label']
 
+    # Load existing scaler and transform data
     scaler = StandardScaler()
     X_scaled = scaler.fit_transform(X)
 
+    # Load existing model
     model = RandomForestClassifier()
     model.fit(X_scaled, y)
-    pickle.dump(model, open("C:/Users/HARSHU/PycharmProjects/DSC_lab/RandomForest_model.pkl", 'wb'))
-    pickle.dump(scaler, open("C:/Users/HARSHU/PycharmProjects/DSC_lab/scaler.pkl", 'wb'))
 
+    # Save updated model and scaler
+    with open("C:/Users/HARSHU/PycharmProjects/DSC_lab/RandomForest_model.pkl", 'wb') as model_file:
+        pickle.dump(model, model_file)
+
+    with open("C:/Users/HARSHU/PycharmProjects/DSC_lab/scaler.pkl", 'wb') as scaler_file:
+        pickle.dump(scaler, scaler_file)
 def app():
     st.title("Help us to improve the performance")
     st.markdown("""
