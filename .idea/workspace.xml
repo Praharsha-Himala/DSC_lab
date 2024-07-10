@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3738eb8e-5940-4c2f-9e3a-408c70574136" name="Changes" comment="website is updated">
-      <change afterPath="$PROJECT_DIR$/app/Help.py" afterDir="false" />
+    <list default="true" id="3738eb8e-5940-4c2f-9e3a-408c70574136" name="Changes" comment="help page is created.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Best_ML_model_Random_Forest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Best_ML_model_Random_Forest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RandomForest_model.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RandomForest_model.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/predict.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/predict.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scaler.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/scaler.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Help.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/Help.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +159,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720633691812</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="help page is created.">
+      <option name="closed" value="true" />
+      <created>1720639578015</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1720639578015</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -176,6 +180,7 @@
     <MESSAGE value="added requirements.txt and other dependencies" />
     <MESSAGE value="refactored name" />
     <MESSAGE value="website is updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="website is updated" />
+    <MESSAGE value="help page is created." />
+    <option name="LAST_COMMIT_MESSAGE" value="help page is created." />
   </component>
 </project>

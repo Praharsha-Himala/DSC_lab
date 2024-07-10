@@ -116,8 +116,10 @@ def improve(url, label):
     test = dataframe.Count_feature_extractor(data)
     X = test.drop(['URL', 'label'], axis=1)
     y = test['label']
+
     scaler = StandardScaler()
     X_scaled = scaler.fit_transform(X)
+
     model = RandomForestClassifier()
     model.fit(X_scaled, y)
     pickle.dump(model, open("C:/Users/HARSHU/PycharmProjects/DSC_lab/RandomForest_model.pkl", 'wb'))
