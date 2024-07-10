@@ -108,7 +108,7 @@ class FeatureExtractor:
 data = pd.read_csv(r'C:\Users\HARSHU\PycharmProjects\DSC_lab\phishing_site_urls.csv')
 
 print(data.head())
-data['Label'] = data['Label'].map({'good': 0, 'bad': 1})
+data['Label'] = data['Label'].map({'good': 1, 'bad': 0})
 dataframe = FeatureExtractor(data)
 test = dataframe.Count_feature_extractor(data)
 FeatureExtractor.preview(test)
