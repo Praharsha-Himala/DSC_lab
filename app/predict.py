@@ -118,6 +118,8 @@ def app():
 
     if user_input:
         user_input = user_input.strip()
+        if user_input[-1] == '/':
+            user_input = user_input[:-1]
         if user_input:
             if st.button("Predict"):
                 with st.spinner("Predicting..."):
@@ -139,4 +141,3 @@ def app():
     - Paste the valid URL into the text box above
     - Click enter and then predict button to analyze
     """)
-    st.caption("Removing '/' at the end of the URL while pasting will help in better results!")

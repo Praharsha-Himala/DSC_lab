@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3738eb8e-5940-4c2f-9e3a-408c70574136" name="Changes" comment="updated model">
+    <list default="true" id="3738eb8e-5940-4c2f-9e3a-408c70574136" name="Changes" comment="help page updated.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RandomForest_model.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RandomForest_model.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/predict.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/predict.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scaler.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/scaler.pkl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -174,7 +176,23 @@
       <option name="project" value="LOCAL" />
       <updated>1720640336407</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="help page updated.">
+      <option name="closed" value="true" />
+      <created>1720640692459</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1720640692459</updated>
+    </task>
+    <task id="LOCAL-00013" summary="help page updated.">
+      <option name="closed" value="true" />
+      <created>1720640969560</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1720640969560</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -189,6 +207,7 @@
     <MESSAGE value="website is updated" />
     <MESSAGE value="help page is created." />
     <MESSAGE value="updated model" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated model" />
+    <MESSAGE value="help page updated." />
+    <option name="LAST_COMMIT_MESSAGE" value="help page updated." />
   </component>
 </project>
